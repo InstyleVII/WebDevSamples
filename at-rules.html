@@ -261,16 +261,19 @@
                 animation-iteration-count: 3;
                 animation-direction: alternate;
             }
-
             @keyframes slidein {
                 from {
                     margin-left:100%;
                     width:300%
                 }
-                
                 to {
                     margin-left:0%;
                     width:100%;
+                }
+            }
+            @media all {
+                .media {
+                    font-size: 24px;
                 }
             }
         </style>
@@ -303,5 +306,6 @@
         <div>
             <p class="supports">This is an example of an @supports rule for CSS Variables</p>
         </div>
+        <h1 class="media">@media example</h1>
     </body>
 </html>
