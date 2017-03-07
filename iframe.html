@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Iframe Ancestor Event Listeners</title>
+        <script>
+            "use strict";
+            window.addEventListener("load", function() {
+                document.getElementById("biz").addEventListener("mouseenter", function() {
+                    console.log("div mouseenter");
+                });
+                document.getElementById("baz").addEventListener("mouseup", function() {
+                    console.log("paragraph mouseup");
+                });
+                document.getElementById("baz").addEventListener("click", function() {
+                    console.log("paragraph click");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="biz">
+            <p id="baz">Test</p>
+        </div>
+    </body>
+<html>
