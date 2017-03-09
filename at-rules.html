@@ -230,6 +230,11 @@
             }
 
             /* Custom Styles */
+            .generic {
+                font-family: 'Times New Roman', Times, serif;
+                font-style: normal;
+                font-weight: 400;
+            }
             .roboto {
                 font-family: 'Roboto';
                 font-style: normal;
@@ -271,6 +276,20 @@
                     width:100%;
                 }
             }
+            .slideout {
+                animation-duration: 3s;
+                animation-name: slideout;
+                animation-iteration-count: 3;
+                animation-direction: alternate;
+            }
+            @keyframes slideout {
+                from {
+                    background-color: red;
+                }
+                to {
+                    background-color: blue;
+                }
+            }
             @media all {
                 .media {
                     font-size: 24px;
@@ -291,8 +310,10 @@
             <p class="roboto-bold-italic">This is an example of Roboto Bold Italic</p>
             <div class="roboto">
                 This is an example of
+                <div class="generic">some crazy</div>
                 <div class="roboto-italic">
                     nested @font-face rules. <span class="roboto-bold">Aren't they lovely?</span>
+                    <p class="generic">One more test</p>
                 </div>                
             </div>
             <p class="roboto">This is an example of multiple glyphs being used in the same element that have the same font-family &#7840;</p>
@@ -304,6 +325,7 @@
             <div class="slidein">
                 This is an example of
                 <p class="slidein">that same animation nested</p>
+                <p class="slideout">A different nested animation</p>
             </div>
         </div>
         <h1>@supports examples</h1>
