@@ -281,18 +281,31 @@
                     width:100%;
                 }
             }
-            .slideout {
+            .colorchange {
                 animation-duration: 3s;
-                animation-name: slideout;
+                animation-name: colorchange;
                 animation-iteration-count: 3;
                 animation-direction: alternate;
             }
-            @keyframes slideout {
+            .doubleanimation {
+                animation-duration: 10s;
+                animation-name: colorchange, fontcolorchange;
+                animation-iteration-count: 5;
+            }
+            @keyframes colorchange {
                 from {
                     background-color: red;
                 }
                 to {
                     background-color: blue;
+                }
+            }
+            @keyframes fontcolorchange {
+                from {
+                    color: yellow;
+                }
+                to {
+                    color: aqua;
                 }
             }
             @media all {
@@ -332,8 +345,9 @@
             <div class="slidein">
                 This is an example of
                 <p class="slidein">that same animation nested</p>
-                <p class="slideout">A different nested animation</p>
+                <p class="colorchange">A different nested animation</p>
             </div>
+            <div class="doubleanimation">This is an example of two different animations with different @keyframes on one element</div>
         </div>
         <h1>@supports examples</h1>
         <div>
