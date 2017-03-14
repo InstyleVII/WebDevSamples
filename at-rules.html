@@ -230,8 +230,13 @@
             }
 
             /* Custom Styles */
-            .generic {
-                font-family: 'Times New Roman', Times, serif;
+            .timesNewRoman {
+                font-family: 'Times New Roman';
+                font-style: normal;
+                font-weight: 400;
+            }
+            .arial {
+                font-family: 'Arial';
                 font-style: normal;
                 font-weight: 400;
             }
@@ -255,8 +260,8 @@
                 font-style: italic;
                 font-weight: 700;
             }
-            @supports (--foo: green) {
-                .supports {
+            @supports (color: green) {
+                .foo {
                     color: green;
                 }
             }
@@ -305,16 +310,18 @@
         <h1>@font-face examples</h1>
         <div>
             <p class="roboto">This is an example of Roboto</p>
+            <p class="timesNewRoman">This is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long exampleThis is a really long example</p>
             <p class="roboto-italic">This is an example of Roboto Italic</p>
             <p class="roboto-bold">This is an example of Roboto Bold</p>
             <p class="roboto-bold-italic">This is an example of Roboto Bold Italic</p>
             <div class="roboto">
                 This is an example of
-                <div class="generic">some crazy</div>
+                <div class="timesNewRoman">some crazy</div>
                 <div class="roboto-italic">
                     nested @font-face rules. <span class="roboto-bold">Aren't they lovely?</span>
-                    <p class="generic">One more test</p>
-                </div>                
+                    <p class="timesNewRoman">One more test</p>
+                </div>
+                <div class="arial">Just kidding here's another</div>
             </div>
             <p class="roboto">This is an example of multiple glyphs being used in the same element that have the same font-family &#7840;</p>
             <p class="roboto">This is an example of multiple glyphs being used in the same element that have different font-family's &#0400;</p>
@@ -330,7 +337,7 @@
         </div>
         <h1>@supports examples</h1>
         <div>
-            <p class="supports">This is an example of an @supports rule for CSS Variables</p>
+            <p class="foo">This is an example of an @supports rule for CSS Variables</p>
         </div>
         <h1 class="media">@media example</h1>
     </body>
