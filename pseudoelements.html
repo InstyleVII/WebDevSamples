@@ -25,15 +25,33 @@
             .highlight::selection {
                 background-color: yellow;
             }
+            .highlight::inactive-selection {
+                background-color: red;
+            }
+            ::marker {
+                color: blue;
+            }
+            ::placeholder {
+                color: blue;
+            }
+            ::-moz-placeholder {
+                color: blue;
+            }
+            ::-ms-input-placeholder {
+                color: blue;
+            }
+            :placeholder-shown {
+                border-color: red;
+            }
         </style>
     </head>
-    <body id="foo">
+    <body>
         <header>
             <a href="at-rules.html">CSS At-rules Samples</a>
             <a href="ancestors.html">Ancestor Event Listeners</a>
             <a href="/">Pseudo Elements</a>
         </header>
-        <div id="bar">
+        <div>
             <p class="firstLetter">This is an example of ::first-letter.</p>
             <p class="firstLine">This is an example of ::first-line. For this one I'll type multiple sentences. That way I can be sure my test works. If I make the sentence long enough it'll wrap to a second line.</p>
             <div class="beforeAndAfter">
@@ -44,5 +62,14 @@
             </div>
             <p class="highlight">This is a paragraph that sets the selected color to yellow</p>
         </div>
+        <ul>
+            <li class="marker">First</li>
+            <li class="marker">Second</li>
+            <li class="marker">Third</li>
+            <li class="marker">Fourth</li>
+            <li class="marker">Fifth</li>
+        </ul>
+        <input type="range"/>
+        <input type="text" placeholder="write some text here"/>
     </body>
 <html>
