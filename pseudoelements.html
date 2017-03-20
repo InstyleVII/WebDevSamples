@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Pseudo Elements</title>
+        <style>
+            .firstLetter::first-letter {
+                font-family: "Courier";
+                font-size: 72px;
+                font-weight: 500;
+            }
+            .firstLine::first-line {
+                font-family: "Courier";
+                font-size: 24px;
+            }
+            .beforeAndAfter::before {
+                content: "I'm adding some content before here.";
+            }
+            .beforeAndAfter::after {
+                content: "Now here is some content after!";
+            }
+            .beforeAndAfterImage::before, .beforeAndAfterImage::after {
+                content: url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Microsoft_Edge_logo.svg/80px-Microsoft_Edge_logo.svg.png);
+            }
+            .highlight::selection {
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body id="foo">
+        <header>
+            <a href="at-rules.html">CSS At-rules Samples</a>
+            <a href="ancestors.html">Ancestor Event Listeners</a>
+            <a href="/">Pseudo Elements</a>
+        </header>
+        <div id="bar">
+            <p class="firstLetter">This is an example of ::first-letter.</p>
+            <p class="firstLine">This is an example of ::first-line. For this one I'll type multiple sentences. That way I can be sure my test works. If I make the sentence long enough it'll wrap to a second line.</p>
+            <div class="beforeAndAfter">
+                This is an example of ::before and ::after.
+            </div>
+            <div class="beforeAndAfterImage">
+                This is a before and after with some images!
+            </div>
+            <p class="highlight">This is a paragraph that sets the selected color to yellow</p>
+        </div>
+    </body>
+<html>
