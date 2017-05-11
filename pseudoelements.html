@@ -4,25 +4,25 @@
         <meta charset="utf-8"/>
         <title>Pseudo Elements</title>
         <style>
-            .firstLetter::first-letter {
+            .firstLetter::first-letter, .oneOfEverything::first-letter {
                 font-family: "Courier";
                 font-size: 72px;
                 font-weight: 500;
             }
-            .firstLine::first-line {
+            .firstLine::first-line, .oneOfEverything::first-line {
                 font-family: "Courier";
                 font-size: 24px;
             }
-            .beforeAndAfter::before {
+            .beforeAndAfter::before, .oneOfEverything::before {
                 content: "I'm adding some content before here.";
             }
-            .beforeAndAfter::after {
+            .beforeAndAfter::after, .oneOfEverything::after {
                 content: "Now here is some content after!";
             }
-            .beforeAndAfterImage::before, .beforeAndAfterImage::after {
+            .beforeAndAfterImage::before, .beforeAndAfterImage::after, .oneOfEverything::before, .oneOfEverything::after {
                 content: url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Microsoft_Edge_logo.svg/80px-Microsoft_Edge_logo.svg.png);
             }
-            .highlight::selection {
+            .highlight::selection, .oneOfEverything::selection {
                 background-color: yellow;
             }
             .highlight::inactive-selection {
@@ -61,6 +61,7 @@
                 This is a before and after with some images!
             </div>
             <p class="highlight">This is a paragraph that sets the selected color to yellow</p>
+            <div class="oneOfEverything">This is an example of one of everything!</div>
         </div>
         <ul>
             <li class="marker">First</li>

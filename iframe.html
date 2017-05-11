@@ -15,7 +15,6 @@
                 document.getElementById("baz").addEventListener("click", function() {
                     console.log("paragraph click");
                 });
-                document.getElementById("")
                 document.getElementsByClassName('bing')[0].addEventListener("mouseenter", bing);
                 function bing() {
                     console.log("Bing!");
@@ -24,8 +23,17 @@
         </script>
     </head>
     <body class="lang">
+        <button onclick="addMore()">Click Me!</button>
         <div id="biz" class="bing">
             <p id="baz" class="bang">Test</p>
         </div>
+        <script>
+            function addMore() {
+                var node = document.createElement("p");
+                var text = document.createTextNode("Test");
+                node.appendChild(text);
+                document.getElementById("biz").appendChild(node);
+            }
+        </script>
     </body>
 </html>
