@@ -1,0 +1,34 @@
+.external-animation {
+    animation: external 3s infinite;
+}
+
+@keyframes external {
+    0% {
+        color: blue;
+    }
+    100% {
+        color: red;
+    }
+}
+
+.pseudo-animation::before {
+    animation: pseudo 5s infinite;
+}
+
+@keyframes pseudo {
+    0% {
+        color: blue;
+    }
+    25% {
+        color: purple;
+    }
+    50% {
+        color: red;
+    }
+    75% {
+        color: green;
+    }
+    100% {
+        color: yellow;
+    }
+}
