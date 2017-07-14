@@ -1,0 +1,12 @@
+.external-animation {
+    animation: external 3s infinite;
+}
+
+@keyframes external {
+    0% {
+        color: blue;
+    }
+    100% {
+        color: red;
+    }
+}
