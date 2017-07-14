@@ -13,6 +13,7 @@
 
 .pseudo-animation::before {
     animation: pseudo 5s infinite;
+    content: "This is going to change colors";
 }
 
 @keyframes pseudo {
